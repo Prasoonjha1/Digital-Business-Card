@@ -11,7 +11,7 @@ app.use(morgan('tiny'))
 app.use(cors())
 app.use(express.json())
 
-app.get('/burgers',(req,res)=>{
+app.get('/user',(req,res)=>{
     const url = process.env.ENDPOINT
     const options = {
         method: 'GET',

@@ -1,30 +1,36 @@
 import {useState, useEffect } from 'react'
 import axios from 'axios'
 import Card from '../src/components/Card'
+import Footer from './components/Footer'
+import Info from './components/Info'
+import About from './components/About'
+import Image from './components/Image'
 
 const App = () => {
-  const [burgers, setBurgers] = useState(null)
+  const [users, setUsers] = useState(null)
 
   const fetchData = async () => {
-    const burgerData = await axios.get('http://localhost:8000/burgers')
-    const data = Object.keys(burgerData.data.data).map(burger => burgerData.data.data[burger])
-    setBurgers(data)
+    const userData = await axios.get('http://localhost:8000/user')
+    const data = Object.keys(userData.data.data).map(user => userData.data.data[user])
+    setUsers(data)
   }
 
   useEffect(() => {
     fetchData()
   }, [])
 
-  console.log(burgers)
+  console.log(users)
 
   return (
-    <div className="App">
-      <h1>My Favourite Burgers</h1>
-      <div className="burger-feed">
-        {burgers?.map(burger => <Card key={burger.id} burger={burger}/>)}
+      <div>
+      <Image />
+      <div className="cont">
+        {users?.map(user => <Info key={user.id} user = {user} />)}
+        {users?.map(user => <About key={user.id} user = {user} />)}
       </div>
-    </div>
-  )
+      
+      {users?.map(user => <Footer key={user.id} user = {user} />)}
+    </div>)
 }
 
 export default App
