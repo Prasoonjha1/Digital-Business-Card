@@ -1,6 +1,5 @@
 import {useState, useEffect } from 'react'
 import axios from 'axios'
-import Card from '../src/components/Card'
 import Footer from './components/Footer'
 import Info from './components/Info'
 import About from './components/About'
