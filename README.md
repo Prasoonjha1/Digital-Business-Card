@@ -78,3 +78,4 @@ Backend data is showed on portal:8000 from which data is fetched for frontend.
 ![image](https://user-images.githubusercontent.com/57556301/187071417-9d6ba20f-3763-4452-a66b-29e8e5e06fe0.png)
 
 
+Just write your database token and url for get request inside .env file.
