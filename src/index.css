@@ -39,7 +39,7 @@ body {
   color: #F3BF99;
 }
 
-.webs {
+.webs, .webs > a{
   margin-top: 7px;
   font-family: 'Inter';
   font-style: normal;
@@ -52,6 +52,7 @@ body {
 
   color: #F5F5F5;
 }
+
 
 .b1 {
   justify-content: center;
