@@ -7,16 +7,16 @@ function Footer({user})
 {
     return (
         <footer className='footer'>
-            <a href = {user.link.twitter}>
+            <a href = {'http://'+user.link.twitter}>
                 <img src={twitter}></img>
             </a>
-            <a href = {user.link.facebook}>
+            <a href = {'http://'+user.link.facebook}>
                 <img src={facebook}></img>
             </a>
-            <a href = {user.link.instagram}>
+            <a href = {'http://'+user.link.instagram}>
                 <img src={insta}></img>
             </a>
-            <a href = {user.link.github}>
+            <a href = {'http://'+user.link.github}>
                 <img src={git}></img>
             </a>
         </footer>
